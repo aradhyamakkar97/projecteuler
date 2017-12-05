@@ -1,0 +1,10 @@
+terms = [1,2]
+i=2
+total = 0;
+while(terms[-1]<=4000000):
+    terms.append(terms[i-1]+terms[i-2])
+    if(terms[i])%2==0:
+        total+=terms[i]
+    i+=1
+total+=2;
+print(total)
