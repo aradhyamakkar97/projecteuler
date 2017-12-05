@@ -1,0 +1,36 @@
+
+p=[] # will contain list of primes
+
+l=[]
+b=[]
+
+for i in range(2,2000000):
+    l.append(i)
+    b.append(True)
+
+indx=0
+while(indx!=(2000000-2)):
+    if b[indx]:
+        p.append(l[indx])
+
+        permission =True
+        natural=1
+        while permission:
+            if (indx+l[indx]*natural)<(2000000-2):
+                b[indx+l[indx]*natural]=False
+                natural+=1
+            else:
+                permission=False
+
+    indx+=1
+
+n = 600851475143
+hf = 1
+for i in p:
+    if (n % p[i] == 0):
+        print (i)
+
+        hf = p[i]
+        print(hf)
+
+print(hf)
