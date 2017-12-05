@@ -1,0 +1,21 @@
+num1 = 999;
+num2 = 999;
+
+def ispalindromic(n):
+ a=str(n)
+ if (a[0]==a[5]) and (a[1]==a[4]) and (a[2]==a[3]):
+         return True
+ else:
+        return False
+
+higha=0
+print(ispalindromic(123321))
+
+for i in range(100):
+    for j in range(100):
+        a = (1000-i)*(1000-j)
+        if ispalindromic(a):
+            higha=a
+            print(higha)
+
+print(higha)
